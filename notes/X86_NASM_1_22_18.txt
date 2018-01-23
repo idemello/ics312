@@ -1,0 +1,81 @@
+High Level Languages
+    The first high leel language was FORTRAN
+    Having a high level language is good, but
+    the CPU does not understand them
+        as shown in previous exaamples they only understand
+        very basic instructions
+
+    Simplified
+        write code --> compiler --> generates assembly code
+        --> assembler --> binary/machine code --> CPU (Fetch - decode
+        - execute)
+
+Why write assembly?
+    many of us will have to read/write some assembly code at some point
+
+    learning assembly makes you a better programmer in high-level languages
+
+X86 and NASM
+
+x86 is short for 80x86
+    To learn assembly programming need to pick an ISA
+    (Instruction Set Architecture)
+
+    In the late 70s intel crates the 8088 and 8086 processors
+        16 bit registers
+        1 MiB of memboery, divided into 64 KiB segments
+
+    very little fundamental changes since the creation of 8086
+    x86 is very unsightly ISA, add ons vs. re-design
+
+    to write x86 you need to know the name of the register
+    8086 offers 16 bit registers.
+    Four general purpose 16-bit registers
+    
+    AX
+    BX
+    CX
+    DX
+
+    each are 16 bit registers consisting of 8 low bits and 8 bits
+        low least significant
+        high most significant
+    able to refer to each one individually
+    AH, AL
+    BH, BL
+    CH, CL
+    DH, DL
+
+    Two 16 bit index registers
+    SI
+    DI
+
+    General purpose registers
+    conventially these are used to store pointers
+    these general purpose pointers CANNOT be decompsed into High and
+    Low bit 1-byte registers
+
+    Two 16 bit special registers
+    BP: Base Pointer
+    SP: Stack Pointer
+    
+    Four 16-bit sement registers
+    CS Code Segment
+    DS Data Segment
+    SS Stack Segment
+    ES Extra Stack
+
+    16 bit Instruction POinter IP register
+        points to the next instruction to executre
+        typically not used idrecty when writing assembly
+
+    15 bit flasgs register
+        the bits of the FLAGS contain status
+
+    in 8086 processor a program iss lilmited to referncing an address space 
+    of size 1 MiB that is 2^20 bytes
+
+    address space has three logical regions
+
+
+
