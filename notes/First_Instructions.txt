@@ -1,0 +1,68 @@
+Date: 1/24/18
+
+First instructions
+    Assembly instructions can have operans
+
+    Register: specifies one of the registers
+        add eax, ebx
+        means eax = eax + ebx
+
+    Memory: specifies and address in memory
+        add eax, [ebx]
+
+    Immediate: specifies a fixed value (e.ie a number) 
+        add eax, 2
+        means eax = eax + 2
+
+    Increment
+        inc eax
+        means eax = eax + 1
+
+
+    Additions
+        add eax, 4 ; eax = eax  4
+        add al, ah ; al = al + ah
+
+    Subtractions
+        sub bx, 10    ;    bx = bx - 10
+        sub ebx, edi  ; ebx = ebx = ebx - edi
+
+    Increment, Decrement
+        
+    the move instructions
+        Moves data from one location to another
+            move dest, src
+
+        Destination goes FIRST, source goes SECOND
+
+        At most one of the operands can be a memory operand
+        mov eax, [ebx]  ; OK
+        mov [eax], ebx  ; OK
+        mov [eax], [ebx]; NOT OK
+
+        Both operands must be exactly the same size
+            for instance AX cannot be stored into BL
+        Examples:
+            mov ax, ebx ; NOT OK
+            mov bx, ax  ; OK
+
+        Consider the instruction: mov [L], 1
+            assembler error: operation size not specified!
+
+        This is b.c the assembler has no idea whether we mean for "1" to be 01h, 0001h, 0000001h, etc
+            lables have no type
+        Therefore the assember must provide us with a way to specify the size of immediate operands
+        mov dword [L], 1
+            4-byte double word
+                
+Brackers or no brackers
+    mov eax, [L]
+        puts the content at adress L into eax
+        puts 32 bits of content because eax is a 32 bit register
+    fill in from notes
+    *
+    *
+    *
+    *
+    *
+
