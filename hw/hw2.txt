@@ -1,0 +1,108 @@
+Name: Isaac DeMello
+Date: 2/2/18
+Course: ICS 312
+Instructor: Professor Henri Casanova
+
+HW2
+
+--------------------------
+Exercise #1
+--------------------------
+
+
+--------------------------
+Question #1
+--------------------------
+
+A   db "c", "af", 27o, 0
+B   dd  1011b
+C   times 2 dw  -27
+D   db  043h    0AAh
+E   dw  043AAh
+F   dw  -34o, 0
+
+Total Bytes: 
+5 * 1 + 
+1 * 4 +
+2 * 2 +
+2 * 1 +
+1 * 2 +
+2 * 2 =
+21 bytes total
+
+A = | 63 | 61 | 66 | 17 | 00 |
+
+B = | 0B | 00 | 00 | 00 | 
+
+C = | E4 | FF | E5 | FF |
+
+D = | 43 | AA |
+
+E = | AA | 43 |
+
+F = | E4 | FF | 00 | 00 |
+
+--------------------------
+Question #2
+--------------------------
+
+Label's B, C, E, F
+
+--------------------------
+Exercise #2
+--------------------------
+--------------------------
+Question #1
+--------------------------
+
+L1    L2                L3       L4
+B3 01 68 65 6C 6C 6F 00 A1 B2 C3 13 00
+
+
+mov     eax, [L3]
+inc     eax
+mov     [L2], eax
+mov     bx, [L1]
+mov     eax, L3
+inc     eax
+mov     [eax], bx
+
+mov eax, [L3]:
+    - eax: 13 C3 B2 A1
+    - RAM: |B3 01|68 65 6C 6C 6F 00| A1 B2 C3 |13 00 |
+
+inc eax:
+    - eax: 13 C3 B2 A2
+    - RAM: | B3 01| 68 65 6C 6C 6F 00| A1 B2 C3| 13 00 |
+
+mov [L2], eax:
+    - eax: 13 C3 B2 A2
+    - RAM: | B3 01| A2 B2 C3 13 6F 00| A1 B2 C3| 13 00 |
+
+mov bx, [L1]:
+    - bx: 01 B3
+    - eax: 13 C3 B2 A2
+    - RAM: | B3 01| A2 B2 C3 13 6F 00| A1 B2 C3| 13 00 |
+
+mov eax, L3:
+    - bx: 01 B3
+    - eax: points to 9th byte
+    - RAM: | B3 01| A2 B2 C3 13 6F 00| A1 B2 C3| 13 00 |
+
+inc eax
+    - bx: 01 B3
+    - eax: points to 10th byte
+    - RAM: | B3 01| A2 B2 C3 13 6F 00| A1 B2 C3| 13 00 |
+
+mov [eax], bx
+    - bx: 01 B3
+    - eax: points to 10th byte
+    - RAM: | B3 01| A2 B2 C3 13 6F 00| A1 B3 01| 13 00 |
+
+
+   
+
+
+
+
+
