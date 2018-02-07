@@ -1,0 +1,38 @@
+Assembly
+    human shortcode for machine code
+Assembler
+    translates from assembly to machine code
+commenting codes in assembly is essential
+    recommends commenting every line of assembler
+    in NASM ; is a comment
+    anything to the right of a ; is a comment
+    for example:
+        add eax, ebx    ; y = y + b
+
+Assembly directives 
+    %define is a macro
+        for example
+            %define SIZE 100
+    also works with includes
+        %include "some_file"
+
+    #define when possible to avoid code duplication
+
+Program Structure
+
+    ; include
+    directives
+
+    segment .data
+        ; DX directives //defined "variables"
+
+    segment .bss
+        'RESX directives
+
+    segment .text
+        ; instructions
+
+C driver for assembly code
+    installed in hw 0
+
+
